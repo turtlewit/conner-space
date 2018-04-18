@@ -15,13 +15,20 @@ export var speed = 0
 export var dodge_length = 0
 
 var ability_dodge_cooldown = 0
+export var ability_dodge_cooldown_time = 0
+var ability_dodge_cooldown_bar
 
+var draw_schut_line = false
+export var draw_schut_line_time = .1
+var draw_schut_line_time_current = 0
 
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	screen_width = get_viewport_rect().size.x
 	screen_height = get_viewport_rect().size.y
+	
+	ability_dodge_cooldown_bar = get_node("/root/scene/CanvasLayer/AbilityDodgeBar")
 
 func _process(delta):
 	# Called every frame. Delta is time since last frame.
@@ -42,9 +49,9 @@ func _process(delta):
 	if Input.is_action_pressed("MoveDown"):
 		direction.up = -1.0
 	
-	print(AbilityDodgeCheck())
 	if (direction.up != 0 or direction.right !=0) and AbilityDodgeCheck():
 		next_position += Vector2(direction.right, -direction.up) * dodge_length
+		ability_dodge_cooldown = ability_dodge_cooldown_time
 	else:
 		next_position += Vector2(direction.right, -direction.up) * speed * delta
 	
@@ -63,6 +70,37 @@ func _process(delta):
 	else:
 		global_transform.origin.y = 0
 	
+	if ability_dodge_cooldown >= 0:
+		
+		ability_dodge_cooldown -= 1.0 * delta
+		ability_dodge_cooldown_bar.value = ability_dodge_cooldown / ability_dodge_cooldown_time * 100
+	
+	
+	if draw_schut_line:
+		update()
+	draw_schut_line = false
+	if Input.is_action_pressed("Fire"):
+		Shoot(delta)
+
+func _draw():
+	if draw_schut_line:
+		var from = Vector2(0, 0)
+		var to = Vector2(0, -screen_height)
+		draw_line(from, to, Color(randf(), randf(), randf()))
+
+func Shoot(delta):
+	var from = global_transform.origin
+	var to = Vector2(global_transform.origin.x, 0)
+	var space_state = get_world_2d().get_direct_space_state()
+	
+	draw_schut_line = true
+	draw_schut_line_time_current = draw_schut_line_time
+	
+	var result = space_state.intersect_ray(from, to, [self])
+	if not result.empty():
+		print(result.collider.name)
+		if "Enemy" in result.collider.name:
+			result.collider.on_hit(1 * delta)
 
 func AbilityDodgeCheck():
 	return Input.is_action_just_pressed("Ability_Dodge") and ability_dodge_cooldown <= 0
