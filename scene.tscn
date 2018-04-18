@@ -52,6 +52,7 @@ speed = 500
 dodge_length = 500
 ability_dodge_cooldown_time = 5
 draw_schut_line_time = 0.1
+health_max = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D" index="0"]
 
@@ -96,48 +97,167 @@ rounded = false
 percent_visible = false
 _sections_unfolded = [ "Percent" ]
 
+[node name="Health" type="ProgressBar" parent="CanvasLayer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 22.0
+margin_top = 581.0
+margin_right = 1010.0
+margin_bottom = 597.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 100.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Percent" ]
+
 [node name="enemies" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
 
 [node name="Enemy" parent="enemies" index="0" instance=ExtResource( 3 )]
 
-position = Vector2( 97.9469, 119.713 )
+position = Vector2( 97.9469, -1163.39 )
 script = ExtResource( 4 )
 health = 0.25
-speed = 0
+speed = 200
 
-[node name="Enemy2" parent="enemies" index="1" instance=ExtResource( 3 )]
+[node name="Enemy10" parent="enemies" index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 251.669, 233.984 )
+position = Vector2( 178.843, -1227.55 )
 script = ExtResource( 4 )
 health = 0.25
-speed = 0
+speed = 200
 
-[node name="Enemy3" parent="enemies" index="2" instance=ExtResource( 3 )]
+[node name="Enemy11" parent="enemies" index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 380.905, 180.93 )
+position = Vector2( 265.318, -1291.71 )
 script = ExtResource( 4 )
 health = 0.25
-speed = 0
+speed = 200
 
-[node name="Enemy4" parent="enemies" index="3" instance=ExtResource( 3 )]
+[node name="Enemy12" parent="enemies" index="3" instance=ExtResource( 3 )]
 
-position = Vector2( 496.537, 62.5772 )
+position = Vector2( 360.161, -1358.66 )
 script = ExtResource( 4 )
 health = 0.25
-speed = 0
+speed = 200
 
-[node name="Enemy5" parent="enemies" index="4" instance=ExtResource( 3 )]
+[node name="Enemy13" parent="enemies" index="4" instance=ExtResource( 3 )]
 
-position = Vector2( 593.123, 190.452 )
+position = Vector2( 449.425, -1428.39 )
 script = ExtResource( 4 )
 health = 0.25
-speed = 0
+speed = 200
 
-[node name="Enemy6" parent="enemies" index="5" instance=ExtResource( 3 )]
+[node name="Enemy14" parent="enemies" index="5" instance=ExtResource( 3 )]
 
-position = Vector2( 783.576, 118.353 )
+position = Vector2( 547.058, -1498.13 )
 script = ExtResource( 4 )
 health = 0.25
-speed = 0
+speed = 200
+
+[node name="Enemy2" parent="enemies" index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 297.207, -851.322 )
+script = ExtResource( 4 )
+health = 0.25
+speed = 200
+
+[node name="Enemy9" parent="enemies" index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 498.051, -848.533 )
+script = ExtResource( 4 )
+health = 0.25
+speed = 200
+
+[node name="Enemy3" parent="enemies" index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 860.296, -1627.5 )
+script = ExtResource( 4 )
+health = 0.25
+speed = 200
+
+[node name="Enemy15" parent="enemies" index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 764.479, -1710.95 )
+script = ExtResource( 4 )
+health = 0.25
+speed = 200
+
+[node name="Enemy16" parent="enemies" index="10" instance=ExtResource( 3 )]
+
+position = Vector2( 671.753, -1797.49 )
+script = ExtResource( 4 )
+health = 0.25
+speed = 200
+
+[node name="Enemy17" parent="enemies" index="11" instance=ExtResource( 3 )]
+
+position = Vector2( 588.3, -1877.86 )
+script = ExtResource( 4 )
+health = 0.25
+speed = 200
+
+[node name="Enemy18" parent="enemies" index="12" instance=ExtResource( 3 )]
+
+position = Vector2( 510.193, -1955.96 )
+script = ExtResource( 4 )
+health = 0.25
+speed = 200
+
+[node name="Enemy19" parent="enemies" index="13" instance=ExtResource( 3 )]
+
+position = Vector2( 420.929, -2028.49 )
+script = ExtResource( 4 )
+health = 0.25
+speed = 200
+
+[node name="Enemy4" parent="enemies" index="14" instance=ExtResource( 3 )]
+
+position = Vector2( 471.308, -273.802 )
+script = ExtResource( 4 )
+health = 0.25
+speed = 200
+
+[node name="Enemy5" parent="enemies" index="15" instance=ExtResource( 3 )]
+
+position = Vector2( 694.037, -1003.69 )
+script = ExtResource( 4 )
+health = 0.25
+speed = 200
+
+[node name="Enemy6" parent="enemies" index="16" instance=ExtResource( 3 )]
+
+position = Vector2( 682.662, -508.154 )
+script = ExtResource( 4 )
+health = 0.25
+speed = 200
+
+[node name="Enemy7" parent="enemies" index="17" instance=ExtResource( 3 )]
+
+position = Vector2( 336.759, -501.304 )
+script = ExtResource( 4 )
+health = 0.25
+speed = 200
+
+[node name="Enemy8" parent="enemies" index="18" instance=ExtResource( 3 )]
+
+position = Vector2( 504.129, -492.936 )
+script = ExtResource( 4 )
+health = 0.25
+speed = 200
 
 

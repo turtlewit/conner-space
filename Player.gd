@@ -22,9 +22,16 @@ var draw_schut_line = false
 export var draw_schut_line_time = .1
 var draw_schut_line_time_current = 0
 
+export var health_max = 2.0
+var health
+var health_bar
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
+	health = health_max
+	health_bar = get_node("/root/scene/CanvasLayer/Health")
+	
 	screen_width = get_viewport_rect().size.x
 	screen_height = get_viewport_rect().size.y
 	
@@ -81,6 +88,16 @@ func _process(delta):
 	draw_schut_line = false
 	if Input.is_action_pressed("Fire"):
 		Shoot(delta)
+	
+	var collisions = get_overlapping_areas()
+	for collider in collisions:
+		on_hit(delta)
+
+func on_hit(delta):
+	health -= delta
+	health_bar.value = health / health_max * 100
+	if health <= 0:
+		get_tree().quit()
 
 func _draw():
 	if draw_schut_line:
