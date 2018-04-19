@@ -15,7 +15,10 @@ func _ready():
 func _process(delta):
 	# Called every frame. Delta is time since last frame.
 	# Update game logic here.
+	var screen_height = get_viewport_rect().size.y
 	global_translate(Vector2(0, speed * delta))
+	if global_transform.origin.y >= screen_height:
+		die()
 
 func on_hit(damage):
 	health -= damage

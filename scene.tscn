@@ -1,18 +1,97 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://Art/p_player.png" type="Texture" id=2]
-[ext_resource path="res://Prefabs/Enemy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Enemy.gd" type="Script" id=4]
+[ext_resource path="res://scene.gd" type="Script" id=1]
+[ext_resource path="res://Art/Backdrop blue space because black is hard to see.png" type="Texture" id=2]
+[ext_resource path="res://Player.gd" type="Script" id=3]
+[ext_resource path="res://Art/Player Ship.png" type="Texture" id=4]
+[ext_resource path="res://Art/Player lazer shot.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 16, 16 )
+extents = Vector2( 64, 64 )
 
 [node name="scene" type="Node2D" index="0"]
 
-[node name="Camera2D" type="Camera2D" parent="." index="0"]
+script = ExtResource( 1 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." index="0"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer2" index="0"]
+
+position = Vector2( 960, 540 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1920, 1080 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="AbilityDodgeBar" type="ProgressBar" parent="CanvasLayer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 27.0
+margin_top = 28.0
+margin_right = 354.0
+margin_bottom = 66.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 100.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Anchor", "Percent", "Theme" ]
+
+[node name="Health" type="ProgressBar" parent="CanvasLayer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 192.0
+margin_top = -65.0
+margin_right = -192.0
+margin_bottom = -14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 100.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Percent" ]
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
 
 anchor_mode = 0
 rotating = false
@@ -39,7 +118,7 @@ editor_draw_drag_margin = false
 
 [node name="Area2D" type="Area2D" parent="Camera2D" index="0"]
 
-position = Vector2( 515.582, 530.546 )
+position = Vector2( 959.311, 940.637 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -47,10 +126,10 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 1 )
-speed = 500
-dodge_length = 500
-ability_dodge_cooldown_time = 5
+script = ExtResource( 3 )
+speed = 1000
+dodge_length = 1000
+ability_dodge_cooldown_time = 2
 draw_schut_line_time = 0.1
 health_max = 2.0
 
@@ -61,203 +140,16 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="Camera2D/Area2D/CollisionShape2D" index="0"]
 
-scale = Vector2( 0.032, 0.032 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+scale = Vector2( 8, 8 )
+z_index = -1
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
+[node name="Laser" type="Sprite" parent="Camera2D/Area2D/CollisionShape2D/Sprite" index="0"]
 
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-
-[node name="AbilityDodgeBar" type="ProgressBar" parent="CanvasLayer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 183.0
-margin_bottom = 16.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 100.0
-exp_edit = false
-rounded = false
-percent_visible = false
-_sections_unfolded = [ "Percent" ]
-
-[node name="Health" type="ProgressBar" parent="CanvasLayer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 22.0
-margin_top = 581.0
-margin_right = 1010.0
-margin_bottom = 597.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 100.0
-exp_edit = false
-rounded = false
-percent_visible = false
-_sections_unfolded = [ "Percent" ]
-
-[node name="enemies" type="Node2D" parent="." index="2"]
-
-editor/display_folded = true
-
-[node name="Enemy" parent="enemies" index="0" instance=ExtResource( 3 )]
-
-position = Vector2( 97.9469, -1163.39 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy10" parent="enemies" index="1" instance=ExtResource( 3 )]
-
-position = Vector2( 178.843, -1227.55 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy11" parent="enemies" index="2" instance=ExtResource( 3 )]
-
-position = Vector2( 265.318, -1291.71 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy12" parent="enemies" index="3" instance=ExtResource( 3 )]
-
-position = Vector2( 360.161, -1358.66 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy13" parent="enemies" index="4" instance=ExtResource( 3 )]
-
-position = Vector2( 449.425, -1428.39 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy14" parent="enemies" index="5" instance=ExtResource( 3 )]
-
-position = Vector2( 547.058, -1498.13 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy2" parent="enemies" index="6" instance=ExtResource( 3 )]
-
-position = Vector2( 297.207, -851.322 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy9" parent="enemies" index="7" instance=ExtResource( 3 )]
-
-position = Vector2( 498.051, -848.533 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy3" parent="enemies" index="8" instance=ExtResource( 3 )]
-
-position = Vector2( 860.296, -1627.5 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy15" parent="enemies" index="9" instance=ExtResource( 3 )]
-
-position = Vector2( 764.479, -1710.95 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy16" parent="enemies" index="10" instance=ExtResource( 3 )]
-
-position = Vector2( 671.753, -1797.49 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy17" parent="enemies" index="11" instance=ExtResource( 3 )]
-
-position = Vector2( 588.3, -1877.86 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy18" parent="enemies" index="12" instance=ExtResource( 3 )]
-
-position = Vector2( 510.193, -1955.96 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy19" parent="enemies" index="13" instance=ExtResource( 3 )]
-
-position = Vector2( 420.929, -2028.49 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy4" parent="enemies" index="14" instance=ExtResource( 3 )]
-
-position = Vector2( 471.308, -273.802 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy5" parent="enemies" index="15" instance=ExtResource( 3 )]
-
-position = Vector2( 694.037, -1003.69 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy6" parent="enemies" index="16" instance=ExtResource( 3 )]
-
-position = Vector2( 682.662, -508.154 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy7" parent="enemies" index="17" instance=ExtResource( 3 )]
-
-position = Vector2( 336.759, -501.304 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
-
-[node name="Enemy8" parent="enemies" index="18" instance=ExtResource( 3 )]
-
-position = Vector2( 504.129, -492.936 )
-script = ExtResource( 4 )
-health = 0.25
-speed = 200
+visible = false
+position = Vector2( 1.01318, -9.92912 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Visibility" ]
 
 

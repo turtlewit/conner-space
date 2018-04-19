@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/p_player.png-c750b8fc2ef2b69117a5dd575c8c6d65.stex"
+path="res://.import/Enemy Spider.png-8248814fbf7450e45c9a81cb44eef0b9.stex"
 
 [deps]
 
-source_file="res://Art/p_player.png"
-source_md5="a894a210e06cff0c8933097c7f1c38f9"
+source_file="res://Art/Enemy Spider.png"
+source_md5="fb27a1310aee49ec1932667048f6e2ce"
 
-dest_files=[ "res://.import/p_player.png-c750b8fc2ef2b69117a5dd575c8c6d65.stex" ]
-dest_md5="c189e9dfa89d18085ff7e057b92f804b"
+dest_files=[ "res://.import/Enemy Spider.png-8248814fbf7450e45c9a81cb44eef0b9.stex" ]
+dest_md5="ba3823e113e0380ce48e3bc281d4112d"
 
 [params]
 

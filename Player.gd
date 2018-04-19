@@ -26,12 +26,14 @@ export var health_max = 2.0
 var health
 var health_bar
 
+var laser
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	health = health_max
 	health_bar = get_node("/root/scene/CanvasLayer/Health")
-	
+	laser = get_node("CollisionShape2D/Sprite/Laser")
 	screen_width = get_viewport_rect().size.x
 	screen_height = get_viewport_rect().size.y
 	
@@ -84,7 +86,10 @@ func _process(delta):
 	
 	
 	if draw_schut_line:
+		laser.visible = true
 		update()
+	else:
+		laser.visible = false
 	draw_schut_line = false
 	if Input.is_action_pressed("Fire"):
 		Shoot(delta)
@@ -97,13 +102,13 @@ func on_hit(delta):
 	health -= delta
 	health_bar.value = health / health_max * 100
 	if health <= 0:
-		get_tree().quit()
+		get_tree().change_scene("res://landing.tscn")
 
 func _draw():
 	if draw_schut_line:
-		var from = Vector2(0, 0)
-		var to = Vector2(0, -screen_height)
-		draw_line(from, to, Color(randf(), randf(), randf()))
+		var from = Vector2(5, -100)
+		var to = Vector2(5, -screen_height)
+		draw_line(from, to, Color(randf(), randf(), randf()), 5.0)
 
 func Shoot(delta):
 	var from = global_transform.origin

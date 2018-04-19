@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/p_player.png-c750b8fc2ef2b69117a5dd575c8c6d65.stex"
+path="res://.import/Spider Lazer Shot.png-8d6c43d7146cf1ab9f2ea6d323f6e998.stex"
 
 [deps]
 
-source_file="res://Art/p_player.png"
-source_md5="a894a210e06cff0c8933097c7f1c38f9"
+source_file="res://Art/Spider Lazer Shot.png"
+source_md5="adb222d5a3c66d7e8ce5a84e795f29c1"
 
-dest_files=[ "res://.import/p_player.png-c750b8fc2ef2b69117a5dd575c8c6d65.stex" ]
-dest_md5="c189e9dfa89d18085ff7e057b92f804b"
+dest_files=[ "res://.import/Spider Lazer Shot.png-8d6c43d7146cf1ab9f2ea6d323f6e998.stex" ]
+dest_md5="5b36e3e88d9b79b4998dda510560258a"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

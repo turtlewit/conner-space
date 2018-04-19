@@ -1,0 +1,456 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Prefabs/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Enemy.gd" type="Script" id=2]
+
+[node name="enemies" type="Node2D"]
+
+[node name="Enemy" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 97.9469, -1163.39 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy26" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 86.5067, -2290.23 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy36" parent="." index="2" instance=ExtResource( 1 )]
+
+position = Vector2( 612.749, -2679.2 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy56" parent="." index="3" instance=ExtResource( 1 )]
+
+position = Vector2( 1230.51, -3136.8 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy43" parent="." index="4" instance=ExtResource( 1 )]
+
+position = Vector2( 612.749, -2679.2 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy50" parent="." index="5" instance=ExtResource( 1 )]
+
+position = Vector2( 1230.51, -3136.8 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy10" parent="." index="6" instance=ExtResource( 1 )]
+
+position = Vector2( 178.843, -1227.55 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy28" parent="." index="7" instance=ExtResource( 1 )]
+
+position = Vector2( 167.403, -2354.39 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy33" parent="." index="8" instance=ExtResource( 1 )]
+
+position = Vector2( 693.645, -2743.36 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy53" parent="." index="9" instance=ExtResource( 1 )]
+
+position = Vector2( 1311.41, -3200.96 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy41" parent="." index="10" instance=ExtResource( 1 )]
+
+position = Vector2( 693.645, -2743.36 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy48" parent="." index="11" instance=ExtResource( 1 )]
+
+position = Vector2( 1311.41, -3200.96 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy11" parent="." index="12" instance=ExtResource( 1 )]
+
+position = Vector2( 265.318, -1291.71 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy27" parent="." index="13" instance=ExtResource( 1 )]
+
+position = Vector2( 253.878, -2418.55 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy34" parent="." index="14" instance=ExtResource( 1 )]
+
+position = Vector2( 780.12, -2807.52 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy45" parent="." index="15" instance=ExtResource( 1 )]
+
+position = Vector2( 1397.88, -3265.12 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy38" parent="." index="16" instance=ExtResource( 1 )]
+
+position = Vector2( 780.12, -2807.52 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy55" parent="." index="17" instance=ExtResource( 1 )]
+
+position = Vector2( 1397.88, -3265.12 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy12" parent="." index="18" instance=ExtResource( 1 )]
+
+position = Vector2( 360.161, -1358.66 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy31" parent="." index="19" instance=ExtResource( 1 )]
+
+position = Vector2( 348.721, -2485.5 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy35" parent="." index="20" instance=ExtResource( 1 )]
+
+position = Vector2( 874.963, -2874.47 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy51" parent="." index="21" instance=ExtResource( 1 )]
+
+position = Vector2( 1492.72, -3332.07 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy39" parent="." index="22" instance=ExtResource( 1 )]
+
+position = Vector2( 874.963, -2874.47 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy46" parent="." index="23" instance=ExtResource( 1 )]
+
+position = Vector2( 1492.72, -3332.07 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy13" parent="." index="24" instance=ExtResource( 1 )]
+
+position = Vector2( 449.425, -1428.39 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy30" parent="." index="25" instance=ExtResource( 1 )]
+
+position = Vector2( 437.985, -2555.23 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy37" parent="." index="26" instance=ExtResource( 1 )]
+
+position = Vector2( 964.227, -2944.2 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy54" parent="." index="27" instance=ExtResource( 1 )]
+
+position = Vector2( 1581.99, -3401.8 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy42" parent="." index="28" instance=ExtResource( 1 )]
+
+position = Vector2( 964.227, -2944.2 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy49" parent="." index="29" instance=ExtResource( 1 )]
+
+position = Vector2( 1581.99, -3401.8 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy14" parent="." index="30" instance=ExtResource( 1 )]
+
+position = Vector2( 547.058, -1498.13 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy29" parent="." index="31" instance=ExtResource( 1 )]
+
+position = Vector2( 535.618, -2624.97 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy44" parent="." index="32" instance=ExtResource( 1 )]
+
+position = Vector2( 1153.38, -3082.58 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy32" parent="." index="33" instance=ExtResource( 1 )]
+
+position = Vector2( 1061.86, -3013.94 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy52" parent="." index="34" instance=ExtResource( 1 )]
+
+position = Vector2( 1679.62, -3471.54 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy40" parent="." index="35" instance=ExtResource( 1 )]
+
+position = Vector2( 1061.86, -3013.94 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy47" parent="." index="36" instance=ExtResource( 1 )]
+
+position = Vector2( 1679.62, -3471.54 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy2" parent="." index="37" instance=ExtResource( 1 )]
+
+position = Vector2( 558.111, -837.345 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy9" parent="." index="38" instance=ExtResource( 1 )]
+
+position = Vector2( 819.521, -806.602 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy3" parent="." index="39" instance=ExtResource( 1 )]
+
+position = Vector2( 1729.74, -1570.3 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy24" parent="." index="40" instance=ExtResource( 1 )]
+
+position = Vector2( 1798.38, -1873.46 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy15" parent="." index="41" instance=ExtResource( 1 )]
+
+position = Vector2( 1633.92, -1653.75 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy25" parent="." index="42" instance=ExtResource( 1 )]
+
+position = Vector2( 1702.56, -1956.91 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy16" parent="." index="43" instance=ExtResource( 1 )]
+
+position = Vector2( 1541.2, -1740.29 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy20" parent="." index="44" instance=ExtResource( 1 )]
+
+position = Vector2( 1609.84, -2043.45 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy17" parent="." index="45" instance=ExtResource( 1 )]
+
+position = Vector2( 1457.74, -1820.66 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy21" parent="." index="46" instance=ExtResource( 1 )]
+
+position = Vector2( 1526.38, -2123.82 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy18" parent="." index="47" instance=ExtResource( 1 )]
+
+position = Vector2( 1379.64, -1898.76 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy22" parent="." index="48" instance=ExtResource( 1 )]
+
+position = Vector2( 1448.28, -2201.92 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy19" parent="." index="49" instance=ExtResource( 1 )]
+
+position = Vector2( 1290.37, -1971.29 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy23" parent="." index="50" instance=ExtResource( 1 )]
+
+position = Vector2( 1359.01, -2274.45 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy4" parent="." index="51" instance=ExtResource( 1 )]
+
+position = Vector2( 784.424, -205.851 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy5" parent="." index="52" instance=ExtResource( 1 )]
+
+position = Vector2( 1113.35, -1003.69 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy6" parent="." index="53" instance=ExtResource( 1 )]
+
+position = Vector2( 1353.56, -354.407 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy7" parent="." index="54" instance=ExtResource( 1 )]
+
+position = Vector2( 346.077, -594.484 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+[node name="Enemy8" parent="." index="55" instance=ExtResource( 1 )]
+
+position = Vector2( 788.328, -492.936 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+health = 0.15
+speed = 400
+
+
